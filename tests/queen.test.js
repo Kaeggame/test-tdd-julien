@@ -9,5 +9,5 @@ test("N=2 [['Nothing']]", () => {
 });
 
 test("N=3 [['Nothing']]", () => {
-    expect(solveNQueens(3)).toEqual(["Nothing"]);
+    expect(solveNQueens(3)).toEqual([["Nothing"]]);
 });
