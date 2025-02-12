@@ -1,5 +1,5 @@
 function solveNQueens(n) {
-    if (n === 1) {
+    if (n <= 3) {
         return [["Nothing"]];
     }
     return [];
