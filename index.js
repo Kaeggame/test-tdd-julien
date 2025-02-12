@@ -1,5 +1,5 @@
 function solveNQueens(n) {
-    if (n < 4) {
+    if (n < 4 && n !== 1) {
         return [["Nothing"]];
     }
 
@@ -38,5 +38,19 @@ function solveNQueens(n) {
     findSolutions(board, 0);
     return result;
 }
+
+const readline = require('node:readline');
+
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout,
+});
+
+rl.question('number?', a => {
+    const x = parseInt(a, 10);
+    const result = solveNQueens(x);
+    console.log(result);
+    rl.close();
+});
 
 module.exports = solveNQueens;
