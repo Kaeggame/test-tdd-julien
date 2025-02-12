@@ -1,7 +1,7 @@
 const solveNQueens = require("../index");
 
 test("N=1 1 possibilitie", () => {
-    expect(solveNQueens(1)).toEqual([["Q"]]);
+    expect(solveNQueens(1)).toEqual([["#"]]);
 });
 
 test("N=2 [['Nothing']]", () => {
@@ -15,16 +15,16 @@ test("N=3 [['Nothing']]", () => {
 test("N=4 2 possibilities", () => {
     expect(solveNQueens(4)).toEqual([
         [
-            '0Q00',
-            '000Q',
-            'Q000',
-            '00Q0'
+            '0#00',
+            '000#',
+            '#000',
+            '00#0'
         ],
         [
-            '00Q0',
-            'Q000',
-            '000Q',
-            '0Q00'
+            '00#0',
+            '#000',
+            '000#',
+            '0#00'
         ]
     ]);
 });
@@ -36,7 +36,7 @@ test("Queens count 4", () => {
         let count = 0;
         for (let i = 0; i < board.length; i++) {
             for (let j = 0; j < board[i].length; j++) {
-                if (board[i][j] === 'Q') {
+                if (board[i][j] === '#') {
                     count++;
                 }
             }
@@ -52,7 +52,7 @@ test("Queens count 8", () => {
         let count = 0;
         for (let i = 0; i < board.length; i++) {
             for (let j = 0; j < board[i].length; j++) {
-                if (board[i][j] === 'Q') {
+                if (board[i][j] === '#') {
                     count++;
                 }
             }

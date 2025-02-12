@@ -8,13 +8,13 @@ function solveNQueens(n) {
 
     function isValid(board, row, col) {
         for (let i = 0; i < row; i++) {
-            if (board[i][col] === 'Q') {
+            if (board[i][col] === '#') {
                 return false;
             }
-            if (col - row + i >= 0 && board[i][col - row + i] === 'Q') {
+            if (col - row + i >= 0 && board[i][col - row + i] === '#') {
                 return false;
             }
-            if (col + row - i < n && board[i][col + row - i] === 'Q') {
+            if (col + row - i < n && board[i][col + row - i] === '#') {
                 return false;
             }
         }
@@ -28,7 +28,7 @@ function solveNQueens(n) {
         }
         for (let col = 0; col < n; col++) {
             if (isValid(board, row, col)) {
-                board[row][col] = 'Q';
+                board[row][col] = '#';
                 findSolutions(board, row + 1);
                 board[row][col] = '0';
             }
